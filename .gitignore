@@ -1,0 +1,13 @@
+# Pastas geradas pelo colcon build
+/build/
+/install/
+/log/
+
+# Configurações locais de IDE
+.vscode/
+**/src/.vscode/
+
+# Arquivos temporários do editor/sistema
+.DS_Store
+*.swp
+*~
