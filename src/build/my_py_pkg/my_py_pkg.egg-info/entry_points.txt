@@ -1,0 +1,2 @@
+[console_scripts]
+py_node_cuco = my_py_pkg.my_first_node:main

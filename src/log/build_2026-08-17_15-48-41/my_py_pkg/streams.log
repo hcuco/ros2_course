@@ -1,0 +1,36 @@
+[0.330s] Invoking command in '/home/labra/cuco_ros2_ws/src/my_py_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/labra/cuco_ros2_ws/src/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_py_pkg build --build-base /home/labra/cuco_ros2_ws/src/build/my_py_pkg/build install --record /home/labra/cuco_ros2_ws/src/build/my_py_pkg/install.log --single-version-externally-managed install_data
+[0.463s] running egg_info
+[0.471s] creating ../build/my_py_pkg/my_py_pkg.egg-info
+[0.471s] writing ../build/my_py_pkg/my_py_pkg.egg-info/PKG-INFO
+[0.471s] writing dependency_links to ../build/my_py_pkg/my_py_pkg.egg-info/dependency_links.txt
+[0.472s] writing entry points to ../build/my_py_pkg/my_py_pkg.egg-info/entry_points.txt
+[0.472s] writing requirements to ../build/my_py_pkg/my_py_pkg.egg-info/requires.txt
+[0.472s] writing top-level names to ../build/my_py_pkg/my_py_pkg.egg-info/top_level.txt
+[0.472s] writing manifest file '../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[0.489s] reading manifest file '../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[0.490s] writing manifest file '../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[0.490s] running build
+[0.490s] running build_py
+[0.490s] creating /home/labra/cuco_ros2_ws/src/build/my_py_pkg/build/lib/my_py_pkg
+[0.490s] copying my_py_pkg/__init__.py -> /home/labra/cuco_ros2_ws/src/build/my_py_pkg/build/lib/my_py_pkg
+[0.490s] copying my_py_pkg/templates.py -> /home/labra/cuco_ros2_ws/src/build/my_py_pkg/build/lib/my_py_pkg
+[0.490s] copying my_py_pkg/my_first_node.py -> /home/labra/cuco_ros2_ws/src/build/my_py_pkg/build/lib/my_py_pkg
+[0.490s] running install
+[0.492s] running install_lib
+[0.501s] creating /home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg
+[0.501s] copying /home/labra/cuco_ros2_ws/src/build/my_py_pkg/build/lib/my_py_pkg/__init__.py -> /home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg
+[0.501s] copying /home/labra/cuco_ros2_ws/src/build/my_py_pkg/build/lib/my_py_pkg/templates.py -> /home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg
+[0.501s] copying /home/labra/cuco_ros2_ws/src/build/my_py_pkg/build/lib/my_py_pkg/my_first_node.py -> /home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg
+[0.502s] byte-compiling /home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/__init__.py to __init__.cpython-312.pyc
+[0.502s] byte-compiling /home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/templates.py to templates.cpython-312.pyc
+[0.502s] byte-compiling /home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/my_first_node.py to my_first_node.cpython-312.pyc
+[0.502s] running install_data
+[0.502s] creating /home/labra/cuco_ros2_ws/src/install/my_py_pkg/share/ament_index/resource_index/packages
+[0.502s] copying resource/my_py_pkg -> /home/labra/cuco_ros2_ws/src/install/my_py_pkg/share/ament_index/resource_index/packages
+[0.502s] copying package.xml -> /home/labra/cuco_ros2_ws/src/install/my_py_pkg/share/my_py_pkg
+[0.502s] running install_egg_info
+[0.511s] Copying ../build/my_py_pkg/my_py_pkg.egg-info to /home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg-0.0.0-py3.12.egg-info
+[0.512s] running install_scripts
+[0.530s] Installing py_node_cuco script to /home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/my_py_pkg
+[0.530s] writing list of installed files to '/home/labra/cuco_ros2_ws/src/build/my_py_pkg/install.log'
+[0.541s] Invoked command in '/home/labra/cuco_ros2_ws/src/my_py_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/labra/cuco_ros2_ws/src/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/labra/cuco_ros2_ws/src/install/my_py_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_py_pkg build --build-base /home/labra/cuco_ros2_ws/src/build/my_py_pkg/build install --record /home/labra/cuco_ros2_ws/src/build/my_py_pkg/install.log --single-version-externally-managed install_data
