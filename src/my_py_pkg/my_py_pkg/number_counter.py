@@ -19,7 +19,6 @@ class NumberCounterNode(Node):
         self.counter += msg.data
         new_msg = Int64()
         new_msg.data = self.counter
-
         self.publisher_.publish(new_msg)
 
     def callback_reset_counter(self, request: SetBool.Request, response: SetBool.Response):
