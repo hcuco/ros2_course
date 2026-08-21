@@ -14,7 +14,6 @@ class NumberPublisherNode(Node):
         self.timer_period_ = self.get_parameter("timer_period").value
         self.add_post_set_parameters_callback(self.parameters_callback)
 
-
         self.publisher_ = self.create_publisher(Int64,"number",10)
         self.timer_ = self.create_timer(self.timer_period_, self.publish_number)
         self.get_logger().info("Number Publisher has been started.")

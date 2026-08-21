@@ -1,0 +1,8 @@
+/tsk_controller:
+  ros__parameters:
+    kp: 3.0
+    ki: 10.0
+
+/turtle_spawner:
+  ros__parameters:
+    spawn_period: 1.0

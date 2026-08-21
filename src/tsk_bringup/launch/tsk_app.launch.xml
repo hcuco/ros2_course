@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="turtlesim" exec="turtlesim_node" />
+
+    <node pkg="turtle_serial_killer_pkg" exec="tsk_controller">
+        <!-- <param name="kp" value="3.0" />
+        <param name="ki" value="10.0" /> -->
+        <param from="$(find-pkg-share tsk_bringup)/config/tsk_app.yaml" />
+    </node>
+
+    <node pkg="turtle_serial_killer_pkg" exec="turtle_spawner">
+        <!-- <param name="spawn_period" value="1.0" /> -->
+        <param from="$(find-pkg-share tsk_bringup)/config/tsk_app.yaml" />
+    </node>
+
+</launch>
