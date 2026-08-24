@@ -8,7 +8,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     urdf_path = os.path.join(get_package_share_path("labra_robot_description"),
-                             'urdf','labra_robot.urdf')
+                             'urdf','labra_robot.urdf.xacro')
     rviz_config_path = os.path.join(get_package_share_path('labra_robot_description'),
                                     'rviz', 'urdf_config.rviz')
     
