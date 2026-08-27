@@ -7,24 +7,22 @@
     <xacro:property name="cylinder_radius" value="0.02"/>
     <xacro:property name="cylinder_length" value="0.3"/>
 
-    <link name="base_footprint"/>
-
     <link name="arm_base_link">
         <visual>
             <geometry>
                 <box size="${arm_base_length} ${arm_base_width} ${arm_base_height}" />
             </geometry>
             <origin xyz="0 0 ${arm_base_height / 2.0}" rpy="0 0 0" />
-            <material name="blue" />
+            <material name="orange" />
         </visual>
-        <!-- <collision>
+        <collision>
             <geometry>
-                <box size="${base_length} ${base_width} ${base_height}" />
+                <box size="${arm_base_length} ${arm_base_width} ${arm_base_height}" />
             </geometry>
-            <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+            <origin xyz="0 0 ${arm_base_height / 2.0}" rpy="0 0 0" />
         </collision>
-        <xacro:box_inertia m="5.0" x="${base_length}" y="${base_width}" z="${base_height}"
-                           o_xyz="0 0 ${base_height / 2.0}" o_rpy="0 0 0" /> -->
+        <xacro:box_inertia m="0.5" x="${arm_base_length}" y="${arm_base_width}" z="${arm_base_height}"
+                           o_xyz="0 0 ${arm_base_height / 2.0}" o_rpy="0 0 0" />
     </link>
 
     <link name="forearm_link">
@@ -33,16 +31,16 @@
                 <cylinder radius="${cylinder_radius}" length="${cylinder_length}" />
             </geometry>
             <origin xyz="0 0 ${cylinder_length/2.0}" rpy="0 0 0" />
-            <material name="blue" />
+            <material name="yellow" />
         </visual>
-        <!-- <collision>
+        <collision>
             <geometry>
-                <box size="${base_length} ${base_width} ${base_height}" />
+                <cylinder radius="${cylinder_radius}" length="${cylinder_length}" />
             </geometry>
-            <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+            <origin xyz="0 0 ${cylinder_length/2.0}" rpy="0 0 0" />
         </collision>
-        <xacro:box_inertia m="5.0" x="${base_length}" y="${base_width}" z="${base_height}"
-                           o_xyz="0 0 ${base_height / 2.0}" o_rpy="0 0 0" /> -->
+        <xacro:cylinder_inertia m="0.3" r="${cylinder_radius}" h="${cylinder_length}"
+                           o_xyz="0 0 ${cylinder_length / 2.0}" o_rpy="0 0 0" />
     </link>
 
     <link name="hand_link">
@@ -51,23 +49,23 @@
                 <cylinder radius="${cylinder_radius}" length="${cylinder_length}" />
             </geometry>
             <origin xyz="0 0 ${cylinder_length/2.0}" rpy="0 0 0" />
-            <material name="blue" />
+            <material name="orange" />
         </visual>
-        <!-- <collision>
+        <collision>
             <geometry>
-                <box size="${base_length} ${base_width} ${base_height}" />
+                <cylinder radius="${cylinder_radius}" length="${cylinder_length}" />
             </geometry>
-            <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+            <origin xyz="0 0 ${cylinder_length/2.0}" rpy="0 0 0" />
         </collision>
-        <xacro:box_inertia m="5.0" x="${base_length}" y="${base_width}" z="${base_height}"
-                           o_xyz="0 0 ${base_height / 2.0}" o_rpy="0 0 0" /> -->
+        <xacro:cylinder_inertia m="0.3" r="${cylinder_radius}" h="${cylinder_length}"
+                           o_xyz="0 0 ${cylinder_length / 2.0}" o_rpy="0 0 0" />
     </link>
 
 
-    <joint name="base_joint" type="fixed">
-        <parent link="base_footprint" />
+    <joint name="base_armbase_joint" type="fixed">
+        <parent link="base_link" />
         <child link="arm_base_link" />
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="${base_length/4} 0 ${base_height}" rpy="0 0 0" />
     </joint>
 
     <joint name="base_forearm_joint" type="revolute">
@@ -85,25 +83,5 @@
         <axis xyz="0 1 0"/>
         <limit effort="1000.0" lower="${-pi/3}" upper="${pi/3}" velocity="0.1"/>
     </joint>
-
-    <!-- <joint name="base_right_wheel_joint" type="continuous">
-        <parent link="base_link" />
-        <child link="right_wheel_link" />
-        <origin xyz="${-base_length / 4.0} ${-(base_width + wheel_length) / 2.0} 0" rpy="0 0 0" />
-        <axis xyz="0 1 0"/>
-    </joint>
-
-    <joint name="base_left_wheel_joint" type="continuous">
-        <parent link="base_link" />
-        <child link="left_wheel_link" />
-        <origin xyz="${-base_length / 4.0} ${(base_width + wheel_length) / 2.0} 0" rpy="0 0 0" />
-        <axis xyz="0 1 0"/>
-    </joint>
-
-    <joint name="base_caster_wheel_joint" type="fixed">
-        <parent link="base_link" />
-        <child link="caster_wheel_link" />
-        <origin xyz="${base_length / 3.0} 0 ${-wheel_radius / 2.0}" rpy="0 0 0" />
-    </joint> -->
 
 </robot>
